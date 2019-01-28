@@ -1,5 +1,4 @@
 .Person{
-    width: 60%;
     margin: 16px;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
@@ -10,7 +9,7 @@
 button{
     background-color: white;
     font: inherit;
-    border: 1px solid blue;
+    border: 1px solid green;
     padding: 8px;
     cursor: pointer;
 }
