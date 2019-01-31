@@ -44,7 +44,18 @@ class App extends Component {
   }
 
   render() {
+
+    const style = {
+      backgroundColor: 'green',
+      color: 'white',
+      font: 'inherit',
+      border: '1px solid green',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+
     let persons = null;
+
     if(this.state.showPersons) {
       persons = (
         <div>
@@ -57,13 +68,25 @@ class App extends Component {
              changed={(event) => this.nameChangedHandler(event, person.id)} />
           })}
         </div>
-      )
+      );
+
+      style.backgroundColor = 'red';
+    }
+
+    const classes = [];
+    if (this.state.persons.length <= 2) {
+      classes.push('red'); // classes = ['red]
+    }
+    if (this.state.persons.length <= 1) {
+      classes.push('bold'); //classes = ['red', 'bold']
     }
 
     return (
       <div className="App">
         <h1>My New React App</h1>
+        <p className={classes.join(' ')}>Everything is just JavaScript!</p>
         <button 
+          style={style}
           onClick={this.togglePersonsHandler}>Toggle Persons</button>
         {persons}
         
