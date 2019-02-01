@@ -14,3 +14,9 @@
     padding: 8px;
     cursor: pointer;
 } */
+/* 
+const style = {
+    '@media (min-width: 500px)': {
+        width: '450px'
+    }
+}; */
