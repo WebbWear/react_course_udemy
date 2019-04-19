@@ -20,7 +20,6 @@ const cockpit = (props) => {
             <h1>My New React App</h1>
             <p className={classes.join(' ')}>Everything is just JavaScript!</p>
             <button 
-            // style={style}
             onClick={this.togglePersonsHandler}>Toggle Persons</button>
         </div>
     );
